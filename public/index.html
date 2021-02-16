@@ -1,18 +1,738 @@
 <!DOCTYPE html>
-<head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Alegreya|Source+Sans+Pro&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<html>
-<body>
-<h1>Lorem Ipsum generator</h1>
-  <p>How many paragraphs do you want to generate?</p>
-  <input type="number" id="quantity" min="1" max="20" value="1">
-  <button id="generate">Generate</button>
-  <button id="copy">Copy!</button>
-<div id="lorem">
-</div>
-<script type="text/javascript" src="script.js"></script>
-</body>
+<html class="font" lang="en" data-react-helmet="lang">
+  <head>
+    <meta charset="utf-8" />
+    <script
+      src="https://connect.facebook.net/signals/config/838473489555909?v=2.9.33&amp;r=stable"
+      async=""
+    ></script>
+    <script
+      async=""
+      src="https://connect.facebook.net/en_US/fbevents.js"
+    ></script>
+    <script async="" src="https://mc.yandex.ru/metrika/tag.js"></script>
+    <script
+      type="text/javascript"
+      async=""
+      src="//www.googleadservices.com/pagead/conversion_async.js"
+    ></script>
+    <script
+      type="text/javascript"
+      async=""
+      src="https://www.google-analytics.com/plugins/ua/ec.js"
+    ></script>
+    <script
+      type="text/javascript"
+      async=""
+      src="//www.googleadservices.com/pagead/conversion_async.js"
+    ></script>
+    <script
+      type="text/javascript"
+      async=""
+      src="//bat.bing.com/bat.js"
+    ></script>
+    <script
+      type="text/javascript"
+      async=""
+      src="https://www.google-analytics.com/analytics.js"
+    ></script>
+    <script
+      type="text/javascript"
+      async=""
+      src="https://www.google-analytics.com/plugins/ua/linkid.js"
+    ></script>
+    <script
+      type="text/javascript"
+      async=""
+      src="https://www.google-analytics.com/gtm/js?id=GTM-P3B33MM&amp;t=gtm2&amp;cid=1498383462.1613492747"
+    ></script>
+    <script
+      type="text/javascript"
+      async=""
+      src="https://www.google-analytics.com/analytics.js"
+    ></script>
+    <script
+      type="text/javascript"
+      async=""
+      src="http://www.googletagmanager.com/gtag/js?id=G-FTPYEGT5LY&amp;l=dataLayer&amp;cx=c"
+    ></script>
+    <script
+      async=""
+      src="//www.googletagmanager.com/gtm.js?id=GTM-MS2BNB"
+    ></script>
+    <script>
+      "use strict";
+      if (
+        "fontDisplay" in document.documentElement.style ||
+        (localStorage && localStorage.getItem("font"))
+      ) {
+        document.documentElement.classList.add("font");
+      }
+    </script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "//www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-MS2BNB");
+    </script>
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="smell" content="bad" />
+    <title>
+      Foodshood | Admin
+    </title>
+    <meta
+      data-react-helmet="true"
+      property="og:site_name"
+      content="TemplateMonster"
+    />
+    <meta
+      data-react-helmet="true"
+      property="og:locale:alternate"
+      content="ru_RU"
+    />
+    <meta
+      data-react-helmet="true"
+      property="og:locale:alternate"
+      content="de_DE"
+    />
+    <meta
+      data-react-helmet="true"
+      property="og:locale:alternate"
+      content="pl_PL"
+    />
+    <meta
+      data-react-helmet="true"
+      property="og:locale:alternate"
+      content="it_IT"
+    />
+    <meta
+      data-react-helmet="true"
+      property="og:locale:alternate"
+      content="tr_TR"
+    />
+    <meta
+      data-react-helmet="true"
+      property="og:locale:alternate"
+      content="fr_FR"
+    />
+    <meta
+      data-react-helmet="true"
+      property="og:locale:alternate"
+      content="pt_BR"
+    />
+    <meta
+      data-react-helmet="true"
+      property="og:locale:alternate"
+      content="nl_NL"
+    />
+    <meta
+      data-react-helmet="true"
+      property="og:locale:alternate"
+      content="zh_CN"
+    />
+    <meta
+      data-react-helmet="true"
+      property="og:locale:alternate"
+      content="cs_CZ"
+    />
+    <meta
+      data-react-helmet="true"
+      property="og:locale:alternate"
+      content="uk_UA"
+    />
+    <meta
+      data-react-helmet="true"
+      property="og:locale:alternate"
+      content="hu_HU"
+    />
+    <meta
+      data-react-helmet="true"
+      property="og:locale:alternate"
+      content="sv_SE"
+    />
+    <meta data-react-helmet="true" name="twitter:card" content="summary" />
+    <meta
+      data-react-helmet="true"
+      name="twitter:site"
+      content="templatemonster"
+    />
+    <meta
+      data-react-helmet="true"
+      name="twitter:creator"
+      content="templatemonster"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://s3sf.tmimgcdn.com/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://s3sf.tmimgcdn.com/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://s3sf.tmimgcdn.com/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <link rel="manifest" href="https://s3sf.tmimgcdn.com/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="https://s3sf.tmimgcdn.com/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="https://s3sf.tmimgcdn.com/favicon.ico" />
+    <link
+      href="https://s3sf.tmimgcdn.com/plasma-platform.spa.chunk.23ccdef5d231cf5f6e79.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://s3sf.tmimgcdn.com/index.spa.chunk.f79b2cb2e0575fac0d34.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://s3sf.tmimgcdn.com/page_livedemo.spa.chunk.4069d28020108479e626.css"
+      rel="stylesheet"
+    />
+    <script
+      charset="UTF-8"
+      src="//web.webpushs.com/js/push/5ab41f034f43c29d4e5b5082a08f9be1_1.js"
+      async=""
+    ></script>
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="http://www.templatemonsterpreview.com/demo/104257.html"
+      data-react-helmet="true"
+    />
+    <link
+      rel="alternate"
+      hreflang="de"
+      href="http://www.templatemonsterpreview.com/de/demo/104257.html"
+      data-react-helmet="true"
+    />
+    <link
+      rel="alternate"
+      hreflang="fr"
+      href="http://www.templatemonsterpreview.com/fr/demo/104257.html"
+      data-react-helmet="true"
+    />
+    <link
+      rel="alternate"
+      hreflang="it"
+      href="http://www.templatemonsterpreview.com/it/demo/104257.html"
+      data-react-helmet="true"
+    />
+    <link
+      rel="alternate"
+      hreflang="ru"
+      href="http://www.templatemonsterpreview.com/ru/demo/104257.html"
+      data-react-helmet="true"
+    />
+    <link
+      rel="alternate"
+      hreflang="es"
+      href="http://www.templatemonsterpreview.com/es/demo/104257.html"
+      data-react-helmet="true"
+    />
+    <link
+      rel="alternate"
+      hreflang="pl"
+      href="http://www.templatemonsterpreview.com/pl/demo/104257.html"
+      data-react-helmet="true"
+    />
+    <link
+      rel="alternate"
+      hreflang="pt"
+      href="http://www.templatemonsterpreview.com/pt-br/demo/104257.html"
+      data-react-helmet="true"
+    />
+    <link
+      rel="alternate"
+      hreflang="tr"
+      href="http://www.templatemonsterpreview.com/tr/demo/104257.html"
+      data-react-helmet="true"
+    />
+    <link
+      rel="alternate"
+      hreflang="nl"
+      href="http://www.templatemonsterpreview.com/nl/demo/104257.html"
+      data-react-helmet="true"
+    />
+    <link
+      rel="alternate"
+      hreflang="uk"
+      href="http://www.templatemonsterpreview.com/ua/demo/104257.html"
+      data-react-helmet="true"
+    />
+    <link
+      rel="alternate"
+      hreflang="hu"
+      href="http://www.templatemonsterpreview.com/hu/demo/104257.html"
+      data-react-helmet="true"
+    />
+    <link
+      rel="alternate"
+      hreflang="zh"
+      href="http://www.templatemonsterpreview.com/cn/demo/104257.html"
+      data-react-helmet="true"
+    />
+    <link
+      rel="alternate"
+      hreflang="cs"
+      href="http://www.templatemonsterpreview.com/cz/demo/104257.html"
+      data-react-helmet="true"
+    />
+    <link
+      rel="alternate"
+      hreflang="sv"
+      href="http://www.templatemonsterpreview.com/sv/demo/104257.html"
+      data-react-helmet="true"
+    />
+    <link
+      rel="canonical"
+      href="http://www.templatemonsterpreview.com/demo/104257.html"
+      data-react-helmet="true"
+    />
+    <meta
+      name="description"
+      content="The demo preview for this top quality Restaurants Operation | Foodtech Admin Template (#104257) is created for you to get familiar with the template before buying it. Browse through the pages, examine the images, press the buttons, explore the features."
+      data-react-helmet="true"
+    />
+    <meta
+      property="og:url"
+      content="http://www.templatemonsterpreview.com/demo/104257.html"
+      data-react-helmet="true"
+    />
+    <meta
+      property="og:title"
+      content="Live demo for Restaurants Operation | Foodtech Admin Template #104257"
+      data-react-helmet="true"
+    />
+    <meta
+      property="og:description"
+      content="The demo preview for this top quality Restaurants Operation | Foodtech Admin Template (#104257) is created for you to get familiar with the template before buying it. Browse through the pages, exam"
+      data-react-helmet="true"
+    />
+    <meta
+      property="og:image"
+      content="https://s.tmimgcdn.com/scr/104200/restaurants-operation--foodtech-admin-template_104257-original.jpg?width=1024&amp;height=1146"
+      data-react-helmet="true"
+    />
+    <meta property="og:type" content="product" data-react-helmet="true" />
+    <script type="application/ld+json" data-react-helmet="true">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebPage",
+        "url": "http://www.templatemonsterpreview.com/demo/104257.html",
+        "name": "Live demo for Restaurants Operation | Foodtech Admin Template #104257",
+        "description": "The demo preview for this top quality Restaurants Operation | Foodtech Admin Template (#104257) is created for you to get familiar with the template before buying it. Browse through the pages, examine the images, press the buttons, explore the features."
+      }
+    </script>
+    <script src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/990429972/?random=1613495511046&amp;cv=9&amp;fst=1613495511046&amp;num=1&amp;value=22&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;eid=376635471&amp;u_h=768&amp;u_w=1366&amp;u_ah=741&amp;u_aw=1316&amp;u_cd=24&amp;u_his=2&amp;u_tz=330&amp;u_java=false&amp;u_nplug=3&amp;u_nmime=4&amp;gtm=2wg230&amp;sendb=1&amp;ig=1&amp;data=dynx_itemid%3D104257%3Bdynx_pagetype%3Dofferdetail%3Bdynx_totalvalue%3D22%3Bevent%3Dview_item%3Bgoogle_business_vertical%3Dretail%3Bid%3D104257&amp;frm=0&amp;url=http%3A%2F%2Fwww.templatemonsterpreview.com%2Fdemo%2F104257.html&amp;tiba=Live%20demo%20for%20Restaurants%20Operation%20%7C%20Foodtech%20Admin%20Template%20%23104257&amp;hn=www.googleadservices.com&amp;async=1&amp;rfmt=3&amp;fmt=4"></script>
+    <script src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/990429972/?random=1613495511845&amp;cv=9&amp;fst=1613495511845&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=768&amp;u_w=1366&amp;u_ah=741&amp;u_aw=1316&amp;u_cd=24&amp;u_his=2&amp;u_tz=330&amp;u_java=false&amp;u_nplug=3&amp;u_nmime=4&amp;gtm=2wg230&amp;sendb=1&amp;ig=1&amp;data=dynx_pagetype%3Dofferdetail&amp;frm=0&amp;url=http%3A%2F%2Fwww.templatemonsterpreview.com%2Fdemo%2F104257.html&amp;tiba=Live%20demo%20for%20Restaurants%20Operation%20%7C%20Foodtech%20Admin%20Template%20%23104257&amp;hn=www.googleadservices.com&amp;async=1&amp;rfmt=3&amp;fmt=4"></script>
+    <script
+      async=""
+      type="text/javascript"
+      src="https://cdn.livechatinc.com/tracking.js"
+    ></script>
+  </head>
+  <body>
+    <div id="PlasmaPromotionWrapper-14"></div>
+    <div class="root" id="root">
+      <div class="">
+        <div class="">
+          <div class="DemoPanel__closePanel----3hhG" role="button" tabindex="0">
+            <svg
+              viewBox="0 0 20 20"
+              class="DemoPanel__icon--close----2Z0A"
+              width="20"
+              height="20"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12.835 5.872a.5.5 0 10-.67-.744l-4.99 4.493a.513.513 0 00-.078.082.5.5 0 00.077.676l4.991 4.493a.5.5 0 10.67-.744L8.247 10l4.588-4.128z"
+              ></path>
+            </svg>
+          </div>
+          <div class="DemoTemplate----3_Bk DemoTemplate--desktop----11iV">
+            <div class="DemoTemplate__image----3Zv3">
+              <div class="DemoTemplate__frameWrap----1YkU">
+                <iframe
+                  sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-popups"
+                  class="DemoTemplate__frame----2Mvu DemoPanel__frame--animated----hfNj"
+                  title="Preview Template"
+                  src="http://slidesigma.com/themes/html/foodtech/"
+                  style="height: 577px; min-height: calc(100vh - 60px)"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://s3sf.tmimgcdn.com/javascript/fontloader.min.js"
+      async=""
+    ></script>
+    <script type="text/javascript" id="">
+      (function () {
+        function h(b, a, d) {
+          b =
+            b +
+            "\x3d" +
+            a +
+            "; path\x3d/; domain\x3d." +
+            location.hostname.replace(/^www\./i, "");
+          "undefined" !== typeof d &&
+            ((a = new Date()),
+            a.setTime(a.getTime() + d),
+            (b += "; expires\x3d" + a.toUTCString()));
+          document.cookie = b;
+        }
+        function k(b) {
+          for (
+            var a = document.cookie.split(";"), d, f = 0;
+            f < a.length;
+            f++
+          ) {
+            var g = a[f].trim();
+            0 === g.indexOf(b + "\x3d") &&
+              (d = g.substring((b + "\x3d").length, g.length));
+          }
+          return d;
+        }
+        var e = k("aff"),
+          c = new URLSearchParams(window.location.search);
+        (c = c.get("aff")) || (c = "TM");
+        e ||
+          ((e = "TM" === c.toUpperCase() ? 31536e8 : 5184e6), h("aff", c, e));
+        k("ref") ||
+          ((e = btoa(
+            document.referrer ? document.referrer : window.location.href
+          )),
+          h("ref", e));
+        c &&
+          "TM" !== c.toUpperCase() &&
+          ((window.dataLayer = window.dataLayer || []),
+          window.dataLayer.push({ event: "trackAffiliate" }));
+      })();
+    </script>
+    <noscript
+      ><iframe
+        src="//www.googletagmanager.com/ns.html?id=GTM-MS2BNB"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <div class="page" id="page"></div>
+    <script src="https://s3sf.tmimgcdn.com/runtime.spa.bundle.9fb5d7dcba6668f061fb.js"></script>
+    <script
+      defer=""
+      src="https://s3sf.tmimgcdn.com/plasma-platform.spa.chunk.6de3546750abeb6e1227.js"
+    ></script>
+    <script
+      defer=""
+      src="https://s3sf.tmimgcdn.com/vendor.spa.chunk.7bc87b710ba5dcb948ef.js"
+    ></script>
+    <script
+      defer=""
+      src="https://s3sf.tmimgcdn.com/index.spa.chunk.28a24f0dbb0ab3e13c32.js"
+    ></script>
+    <script
+      defer=""
+      src="https://s3sf.tmimgcdn.com/component_promotions.spa.chunk.a2b2aa0fe9febc349a45.js"
+    ></script>
+    <script
+      defer=""
+      src="https://s3sf.tmimgcdn.com/vendors~page_cart~page_livedemo.spa.chunk.cb8f17544936ad6b31ee.js"
+    ></script>
+    <script
+      defer=""
+      src="https://s3sf.tmimgcdn.com/page_livedemo.spa.chunk.5a7c9b5b2a84a386fbff.js"
+    ></script>
+    <div style="display: none; visibility: hidden">
+      <script>
+        var head = document.getElementsByTagName("head")[0],
+          script = document.createElement("script");
+        script.charset = "UTF-8";
+        script.src =
+          "//web.webpushs.com/js/push/5ab41f034f43c29d4e5b5082a08f9be1_1.js";
+        script.async = !0;
+        head.appendChild(script);
+      </script>
+    </div>
+    <script type="text/javascript" id="">
+      function runChat() {
+        window.__lc = window.__lc || {};
+        window.__lc.license = 9531830;
+        (function (e, f, c) {
+          function d(a) {
+            return b._h ? b._h.apply(null, a) : b._q.push(a);
+          }
+          var b = {
+            _q: [],
+            _h: null,
+            _v: "2.0",
+            on: function () {
+              d(["on", c.call(arguments)]);
+            },
+            once: function () {
+              d(["once", c.call(arguments)]);
+            },
+            off: function () {
+              d(["off", c.call(arguments)]);
+            },
+            get: function () {
+              if (!b._h)
+                throw Error(
+                  "[LiveChatWidget] You can't use getters before load."
+                );
+              return d(["get", c.call(arguments)]);
+            },
+            call: function () {
+              d(["call", c.call(arguments)]);
+            },
+            init: function () {
+              var a = f.createElement("script");
+              a.async = !0;
+              a.type = "text/javascript";
+              a.src = "https://cdn.livechatinc.com/tracking.js";
+              f.head.appendChild(a);
+            },
+          };
+          !e.__lc.asyncInit && b.init();
+          e.LiveChatWidget = e.LiveChatWidget || b;
+        })(window, document, [].slice);
+      }
+      setTimeout(function () {
+        runChat();
+      }, 3e3);
+    </script>
+    <noscript
+      ><a href="https://www.livechatinc.com/chat-with/9531830/" rel="nofollow"
+        >Chat with us</a
+      >, powered by
+      <a
+        href="https://www.livechatinc.com/?welcome"
+        rel="noopener nofollow"
+        target="_blank"
+        >LiveChat</a
+      ></noscript
+    >
+
+    <script type="text/javascript" id="">
+      function runYM() {
+        (function (a, e, f, g, b, c, d) {
+          a[b] =
+            a[b] ||
+            function () {
+              (a[b].a = a[b].a || []).push(arguments);
+            };
+          a[b].l = 1 * new Date();
+          c = e.createElement(f);
+          d = e.getElementsByTagName(f)[0];
+          c.async = 1;
+          c.src = g;
+          d.parentNode.insertBefore(c, d);
+        })(
+          window,
+          document,
+          "script",
+          "https://mc.yandex.ru/metrika/tag.js",
+          "ym"
+        );
+        ym(32938414, "init", {
+          id: 32938414,
+          clickmap: !0,
+          trackLinks: !0,
+          accurateTrackBounce: !0,
+          webvisor: !1,
+          ecommerce: "raisaLayer",
+        });
+      }
+      setTimeout(function () {
+        runYM();
+      }, google_tag_manager["GTM-MS2BNB"].macro(29));
+    </script>
+
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/32938414"
+          style="position: absolute; left: -9999px"
+          alt=""
+        /></div
+    ></noscript>
+
+    <script type="text/javascript" id="">
+      (function wait() {
+        if ("undefined" !== typeof fbq && "2.9" < fbq.version) {
+          var a =
+            "en" == google_tag_manager["GTM-MS2BNB"].macro(33)
+              ? ""
+              : "_" +
+                ("br" == google_tag_manager["GTM-MS2BNB"].macro(34)
+                  ? "pt"
+                  : google_tag_manager["GTM-MS2BNB"].macro(35));
+          -1 == document.location.href.search(".appspot.") &&
+            fbq("track", "ViewContent", {
+              content_ids: [google_tag_manager["GTM-MS2BNB"].macro(36) + a],
+              content_type: "product",
+              product_group: google_tag_manager["GTM-MS2BNB"].macro(37),
+              product_category: google_tag_manager["GTM-MS2BNB"].macro(38),
+              value: google_tag_manager["GTM-MS2BNB"].macro(40),
+              currency: "USD",
+            });
+        } else setTimeout(wait, 3);
+      })();
+    </script>
+    <script type="text/javascript" id="">
+      var d = new Date();
+      d.setTime(d.getTime() + 31536e6);
+      var expires = "expires\x3d" + d.toGMTString(),
+        event = google_tag_manager["GTM-MS2BNB"].macro(102);
+      document.cookie =
+        "ga" +
+        event +
+        "\x3d1; " +
+        expires +
+        "; domain\x3d.templatemonster.com; path\x3d/";
+    </script>
+    <div
+      style="width: 0px; height: 0px; display: none; visibility: hidden"
+      id="batBeacon730487630194"
+    >
+      <img
+        style="width: 0px; height: 0px; display: none; visibility: hidden"
+        id="batBeacon685965765210"
+        width="0"
+        height="0"
+        alt=""
+        src="https://bat.bing.com/action/0?ti=4076283&amp;Ver=2&amp;mid=85a841d1-f21d-4b49-af20-d3574f5872dd&amp;sid=d3d64d10707311ebbc949f67a0b9a38a&amp;vid=d3d686a0707311eba07e13c8813edb2f&amp;vids=0&amp;pi=1200101525&amp;lg=en-US&amp;sw=1366&amp;sh=768&amp;sc=24&amp;tl=Live%20demo%20for%20Restaurants%20Operation%20%7C%20Foodtech%20Admin%20Template%20%23104257&amp;p=http%3A%2F%2Fwww.templatemonsterpreview.com%2Fdemo%2F104257.html&amp;r=&amp;lt=6711&amp;evt=pageLoad&amp;msclkid=N&amp;sv=1&amp;rn=259976"
+      />
+    </div>
+    <script type="text/javascript" id="">
+      function runFB() {
+        !(function (b, e, f, g, a, c, d) {
+          b.fbq ||
+            ((a = b.fbq = function () {
+              a.callMethod
+                ? a.callMethod.apply(a, arguments)
+                : a.queue.push(arguments);
+            }),
+            b._fbq || (b._fbq = a),
+            (a.push = a),
+            (a.loaded = !0),
+            (a.version = "2.0"),
+            (a.queue = []),
+            (c = e.createElement(f)),
+            (c.async = !0),
+            (c.src = g),
+            (d = e.getElementsByTagName(f)[0]),
+            d.parentNode.insertBefore(c, d));
+        })(
+          window,
+          document,
+          "script",
+          "https://connect.facebook.net/en_US/fbevents.js"
+        );
+        fbq("init", "838473489555909");
+        fbq("track", "PageView");
+      }
+      setTimeout(function () {
+        runFB();
+      }, google_tag_manager["GTM-MS2BNB"].macro(103));
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=838473489555909&amp;ev=PageView&amp;noscript=1"
+      />
+    </noscript>
+
+    <script type="text/javascript" id="">
+      var seconds = 15;
+      function explode() {
+        str = "";
+        if (15 == seconds || 30 == seconds || 45 == seconds)
+          str = "Interested(" + seconds + "s)";
+        else if (60 == seconds || 90 == seconds || 120 == seconds)
+          str = "Engaged(" + seconds + "s)";
+        else if (180 == seconds || 300 == seconds || 600 == seconds)
+          str = "Immersed(" + seconds + "s)";
+        "" != str && fbq("trackCustom", str);
+        seconds += 15;
+      }
+      setInterval(explode, 15e3);
+    </script>
+    <iframe
+      src="https://bid.g.doubleclick.net/xbbe/pixel?d=KAE"
+      style="display: none"
+    ></iframe>
+    <div
+      id="chat-widget-container"
+      style="
+        opacity: 1;
+        visibility: visible;
+        z-index: 2147483639;
+        position: fixed;
+        bottom: 0px;
+        width: 224px;
+        height: 179px;
+        max-width: 100%;
+        max-height: calc(100% - 0px);
+        min-height: 0px;
+        min-width: 0px;
+        background-color: transparent;
+        border: 0px;
+        overflow: hidden;
+        right: 0px;
+        transition: none 0s ease 0s !important;
+      "
+    >
+      <iframe
+        allow="autoplay; microphone *; camera *;"
+        src="https://secure.livechatinc.com/licence/9531830/v2/open_chat.cgi?license=9531830&amp;group=3&amp;embedded=1&amp;widget_version=3&amp;unique_groups=0&amp;localization_improvement=1"
+        allowtransparency="true"
+        id="chat-widget"
+        name="chat-widget"
+        title="LiveChat chat widget"
+        scrolling="no"
+        style="
+          width: 100%;
+          height: 100%;
+          min-height: 0px;
+          min-width: 0px;
+          margin: 0px;
+          padding: 0px;
+          background-image: none;
+          background-position: 0% 0%;
+          background-size: initial;
+          background-attachment: scroll;
+          background-origin: initial;
+          background-clip: initial;
+          background-color: rgba(0, 0, 0, 0);
+          border-width: 0px;
+          float: none;
+          position: absolute;
+          inset: 0px;
+          transition: none 0s ease 0s !important;
+        "
+      ></iframe>
+    </div>
+  </body>
 </html>
